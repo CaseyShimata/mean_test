@@ -1,0 +1,29 @@
+{
+  "name": "mean_test_take_two",
+  "version": "1.0.0",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "express-session": "^1.15.2",
+    "mongoose": "^4.9.2",
+    "mongoose-deep-populate": "^3.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CaseyShimata/mean_test_take_two.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CaseyShimata/mean_test_take_two/issues"
+  },
+  "homepage": "https://github.com/CaseyShimata/mean_test_take_two#readme",
+  "description": ""
+}

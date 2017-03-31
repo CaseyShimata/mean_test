@@ -1,0 +1,16 @@
+div{
+	background-color: orange;
+}
+th{
+	outline: solid 1px black;
+}
+td{
+	outline: solid 1px black;
+
+}
+input{
+	display: block;
+}
+label{
+	display: block;
+}

@@ -1,0 +1,25 @@
+<div>
+	<a href="#!create_poll">Create a New Poll</a>
+	<a href="/logout">Logout</a>
+	<h3>Current Polls:</h3> <!-- is $scope.user from maincontroller/main factory res.data/ routes/ server_controller json(req.session.user) -->
+	<input type="text" ng-model='my_filter' placeholder="Search"></label>
+	<!-- start each question -->
+	<table>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Survey Question</th>
+				<th>Date Posted</th>
+				<th>Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="poll in polls | filter: my_filter | orderBy: '-createdAt' " style="border: 1px solid green; padding: 10px; margin: 10px;">
+				<td>{{poll._user.name}}</td>
+				<td><a href="#!show_poll/{{poll._id}}">{{poll.poll}}</a></td>
+				<td>{{poll.createdAt | date : shortDate}}</td>
+				<td ng-if='poll._user._id == user._id'> <button ng-click= 'delete(poll._id)'>Delete</button> <a href="#!edit/{{poll._id}}">edit</a></td>
+		</tbody>
+	</table>
+</div>
+<!-- end each post -->

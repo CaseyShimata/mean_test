@@ -1,0 +1,8 @@
+<div ng-messages='loginform.nameinput.$error' style='color:red' role='alert'>
+	<div ng-message='minlength'>your name must not be shorter than 2 characters</div>
+	<div ng-message="required">Name is required</div>
+</div>
+
+<form name='loginform'>
+	<label>Your Name: <input ng-minlength='2' name='nameinput' type="text" ng-model="user.name"></label>
+	<button ng-disabled="loginform.$invalid" ng-click="register_login(user)">Login</button>

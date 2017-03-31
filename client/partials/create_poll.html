@@ -1,0 +1,39 @@
+<!-- need to create each answer saving the id in Question.answers and saving the req.body to Comment and save the newcomment.user = req.session.user._id-->
+<a href="#!index_polls">Cancel</a>
+	<h3>Put the question and options here:</h3>
+	<div ng-messages='pollform.pollinput.$error' style='color:red' role='alert'>
+		<div ng-message='minlength'>question must be at least 8 characters</div>
+		<div ng-message="required">Poll question is required</div>
+	</div>
+	<div ng-messages='pollform.option1.$error' style='color:purple' role='alert'>
+		<div ng-message='minlength'>option one must be longer than 3 characters</div>
+		<div ng-message="required">option 1 is required</div>
+	</div>
+	<div ng-messages='pollform.option2.$error' style='color:purple' role='alert'>
+		<div ng-message='minlength'>option two must be longer than 3 characters</div>
+		<div ng-message="required">option 2 is required</div>
+	</div>
+	<div ng-messages='pollform.option3.$error' style='color:purple' role='alert'>
+		<div ng-message='minlength'>option three must be longer than 3 characters</div>
+		<div ng-message="required">option 3 is required</div>
+	</div>
+	<div ng-messages='pollform.option4.$error' style='color:purple' role='alert'>
+		<div ng-message='minlength'>option four must be longer than 3 characters</div>
+		<div ng-message="required">option 4 is required</div>
+	</div>
+
+
+
+
+
+
+
+	<form name='pollform'>
+		<p>Question:</p>
+		<textarea name='pollinput' ng-required='true' ng-minlength='8' rows="3" cols='20' ng-model="newpoll.poll"></textarea>
+		<label>Option 1: <input name='option1' ng-required='true' ng-minlength='3' type="text" ng-model="newpoll.option1"></label>
+		<label>Option 2: <input name='option2' ng-required='true' ng-minlength='3' type="text" ng-model="newpoll.option2"></label>
+		<label>Option 3: <input name='option3' ng-required='true' ng-minlength='3' type="text" ng-model="newpoll.option3"></label>
+		<label>Option 4: <input name='option4' ng-required='true' ng-minlength='3' type="text" ng-model="newpoll.option4"></label>
+		<button ng-disabled="pollform.$invalid" ng-click="createpoll(newpoll)">Create Poll</button>
+	</form>

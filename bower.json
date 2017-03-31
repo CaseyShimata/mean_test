@@ -1,0 +1,22 @@
+{
+  "name": "mean_test_take_two",
+  "authors": [
+    "shimatacb <shimatacb@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "https://github.com/CaseyShimata/mean_test_take_two",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.3",
+    "angular-route": "^1.6.3",
+    "messages": "^0.1.0"
+  }
+}
